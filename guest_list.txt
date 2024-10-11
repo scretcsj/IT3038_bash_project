@@ -1,0 +1,15 @@
+Sean Scretchen
+scretcsj@mail.uc.edu
+5566778899
+
+Jane Smith
+jane.smith@example.com
+0123456789
+
+Alice Johnson
+alice.johnson@example.com
+9876543210
+
+Bob Brown
+bob.brown@example.com
+0011223344
