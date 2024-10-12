@@ -25,6 +25,8 @@ Once you have Git Bash installed, open your favorite code editor and put the scr
 
 * 0.1
     * CHANGE: Added check name function
+* 0.2
+    * CHANGE: Added check Phone function
 
 
 ## Contact
