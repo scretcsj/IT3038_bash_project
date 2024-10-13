@@ -27,6 +27,8 @@ Once you have Git Bash installed, open your favorite code editor and put the scr
     * CHANGE: Added check name function
 * 0.2
     * CHANGE: Added check Phone function
+* 1.0
+    * CHANGE: Full functionality. Script checks all 3 metrics. Email, phone, and name
 
 
 ## Contact

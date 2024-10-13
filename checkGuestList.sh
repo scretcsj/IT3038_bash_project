@@ -7,6 +7,7 @@ view_help() {
     echo "Options:"
     echo "  --name     Specify name to search. Full name, and correct spelling required"
     echo "  --phone    Specify phone number to search. no dashes"    
+    echo "  --email    Specify email address to search."    
     echo "  --help     Display help message."
 }
 
@@ -32,6 +33,10 @@ while [[ $# -gt 0 ]]; do
             phone="$2"
             shift 2
             ;;
+        --email)
+            email="$2"
+            shift 2
+            ;;
         *)
             file="$1"
             shift
@@ -48,6 +53,7 @@ fi
 
 # regex expressions
 phone_regex="^[0-9]{10}$"
+email_regex="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
 
 # check for misspellings or similar entries
 search_pattern() {
@@ -71,5 +77,14 @@ if [ -n "$phone" ]; then
         search_pattern "$phone" "Phone number"
     else
         echo "Invalid phone number format. Rememeber, no dashes."
+    fi
+fi
+
+# Search email
+if [ -n "$email" ]; then
+    if [[ $email =~ $email_regex ]]; then
+        search_pattern "$email" "Email"
+    else
+        echo "Invalid email format. Need info before and after @"
     fi
 fi
